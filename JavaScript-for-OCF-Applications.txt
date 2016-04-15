@@ -1,0 +1,66 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+JavaScript for OCF (Open Connectivity Foundation) Applications
+
+Sakari Poussa - Software Architect at Intel
+
+Vision: Developers use only web technologies to create end-to-end solutions.
+CoAP, MQTT, 6LoWPAN, BLE.
+Use JavaScript for everything.
+Code reuse, consistent APIs.
+There are 9M mobile developers, 8M web developers, 600K embedded developers.
+IoT will not be built by embedded developers.
+IoT startup investment in 2015 was $1.5B.
+Node.js as JavaScript runtime for headless devices.
+JavaScript V8 engine from Google, Chakra from Microsoft.
+libuv event loop, npm, Node Foundation 2015.
+POSIX threads doing async I/O multi-threaded.
+JavaScript thread running application code is single-threaded.
+Experienced pool of developers.
+Thoroughly asynchronous, scaled well.
+Many packages, including IoT specific.
+Perfect for REST API.
+Full stack applications, both front end and back end.
+Many major services switching to Node.js.
+Industry moving to JavaScript/Node.js for IoT.
+Modern tooling, Swagger, RAML (RESTful API Modeling Language).
+Node.js for IoT.
+Great API makes a difference.
+Iterative design process.
+OCF JavaScript API
+  - Node.js
+  - Cordova and Crosswalk
+  - Tizen
+  - Soletta
+Promise based OCF framework:
+  findResources();
+  register();
+  retrieve();
+  update();
+  observe();
+OCF: specifications, data models, certification, marketing.
+iotivity-node brings JavaScript API to IoTivity framework.
+Based on Node.js and IoTivity.
+Open source, Travis, sample code, demos.
+IoTivity 1.0.1, Node.js 0.10, 0.12, 4.x, 5.x.
+Linux Ostro and OS X support.
+Moving the repo to iotivity.org.
+Apache 2.0 license.
+OCF and cloud.
+REST API, CoAP over TCP, XMPP.
+HTTP to CoAP mapping, protocol translation.
+CoAP, Constrained Application Protocol, REST model for small devices.
+Node.js, Expressjs, and iotivity-node.
+JavaScript on Ostro, new IoT operating system.
+Node, OCF API, Express, mraa, MQTT, CoAP, REST API, systemd, firewall rules.
+libmraa used to interface with I/O on Galileo, Edison, other platforms.
+JavaScript on Soletta.
+OCF JavaScript API.
+Hardware I/O, GPIO, I2C, UART, SPI, PWM.
+JavaScript on Zephyr (MCU RTOS).
+JerryScript, Duktape, libtuv, IoT.js.
+Node.js subset.
+Cordova OCF plugin, Apache Cordova.
+API bridge from JavaScript to native for mobile devices.
+Cordova plugin exposes JavaScript API to developer.
+

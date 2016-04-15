@@ -1,0 +1,54 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Linux Connectivity for IoT
+
+Marcel Holtmann - Principal Engineer, Intel
+Chair Internet Working Group, Bluetooth SIG
+BlueZ (Linux Bluetooth stack) maintainer since 2004
+
+If Linux does not fulfill needs of IoT, something else will come along.
+zephyrproject.org for sensors.
+ostroproject.org for the gateway.
+clearlinux.org for the cloud.
+Always some kind of coordinator in the network.
+Bluetooth, Thread, ZigBee, ZWave, LTE, Wi-Fi, Ant+, WirelessHART, NFC.
+ZigBee for home automation.
+Vendor using NFC in a clothes dryer to check diagnostics.
+LTE will play a larger role, narrow band.
+VLC, visible light communication, used for toys.
+802.15.4 low-rate wireless personal area networks (LR-WPANs).
+Easy: Wi-Fi, Bluetooth, LTE, NFC.
+Complicated: Thread, ZigBee, WirelessHART.
+Talk to your lightbulb from Linux laptop.
+Linux kernel subsystems for connectivity: Bluetooth, 802.11, 802.15.4, 6LoWPAN, NFC.
+Clean driver abstraction, PCI, USB, I2C, UART.
+Netlink or socket, programming APIs.
+6LoWPAN convergence ongoing, 1 - 2 years more.
+wpan.cakelab.org
+BlueZ full support for 4.2 and LE.
+01.org/bluez
+01.org/bluez-android
+Small kernel, Bluetooth as small as possible, ~2MB.
+NFC neard daemon for Linux.
+Supports all major tags, secure element for Linux.
+01.org/linux-nfc
+ConnMan connection manager.
+Wi-Fi management, Bluetooth networking, cellular connectivity handling.
+Used in Google Nest thermostat.
+DHCP, NTP, nftables.
+Manages everything around IPv4/IPv6.
+01.org/connman
+ofono cellular telephony stack 2G/3G/LTE.
+SMS, voice calls, ready for M2M and IoT.
+Real telephony stack.
+01.org/ofono
+IoTivity framework, seamless device to device connectivity.
+Wireless and wired technologies.
+iotivity.org
+Soletta open source framework, libraries for devices.
+solettaproject.org
+Linux, less than 1 MB.
+802.15.4 might come, but start with BTLE off the shelf.
+Many choices for IoT connectivity.
+Don't choose anything that requires NDA, signed agreement.
+

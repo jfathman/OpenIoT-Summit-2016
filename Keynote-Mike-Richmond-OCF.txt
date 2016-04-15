@@ -1,0 +1,31 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Keynote
+
+Ensuring IoT Devices and Solutions Work Seamlessly Together
+
+Mike Richmond - Executive Director OCF (Open Connectivity Foundation)
+Greg Burns - Chief IoT Software Technologist at Intel
+
+Conference industrial complex.
+Many IoT conferences are about business model for firms, not attendees.
+But Embedded Linux Conference is about actual attendees, developers.
+OCF sponsors IoTivity, an open source framework for device connectivity.
+There are a bunch of groups all trying to solve interoperability.
+Groups produce specs, then need open source implementation.
+Why are there geo-specific groups, redundant?
+Need open source and standards.
+This is starting again with IoT, web is a good model of what works.
+IoT will not be built by embedded developers.
+9M mobile developers, 8M web developers, 600K embedded developers.
+There aren't enough embedded developers to do everything.
+Need to pull in mobile/web developers.
+Linux Foundation conferences don't try to pick winners and losers.
+Groups of companies trying to do the right thing.
+Multiple companies should decide how IoT works.
+Greg Burns started Alljoyn, an open source device communication framework.
+Specifics of wire protocol don't matter that much.
+Bigger picture, industry benefits if we have one standard.
+Political problem remains if technical solved.
+Winston Churchill speech, 'end of the beginning'.
+

@@ -1,0 +1,68 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Keynote
+
+Linus Torvalds in Conversation with Dirk Hohndel
+
+Linus Torvalds - Creator of Linux Kernel and git
+Dirk Hohndel - Chief Linux and Open Source Technologist at Intel
+
+Linux 4.6 RC2 just out with tons of changes.
+Past the stage of rewriting whole subsystems.
+Stable model of development for five years.
+Happy how alive all subsystems are.
+Still things to improve after 25 years.
+Started as a workstation.
+Fifteen years ago, started seeing odd embedded uses.
+Using Linux to show commercials on gas pumps.
+Happy with Linux desktop.
+This is first time Linus on stage at Embedded Linux Conference.
+How important is Linux for IoT?
+If really tiny, don't need Linux.
+Need a lot of smart devices to unify everything.
+Never interested in a really small RTOS.
+It needs an MMU (memory management unit) to be interesting.
+Linus is a software person interested in hardware.
+"IoT is unpatchable" quote from someone in industry.
+That is just a fact of life.
+Primary is to get the job done, security is secondary.
+Of course new industries will get things wrong at first.
+Now finally looking at security.
+Ever be perfectly secure?  No.
+Will fix as tools/platforms become more mainstream.
+Ability to upgrade, apply new patches.
+Old apps and devices do not get attention, not shiny anymore.
+Is the vendor still around?  Do they care?
+One-off hardware, turn around in weeks.
+Six months later, sell the next version.
+Developers did not push improvements back to Linus.
+People churning out new devices don't have time.
+Now cheaper to buy chip that is more than you really need.
+Millions of units.
+Converging on a few popular chips.
+So now kernel developers can keep up with devices.
+How open can create interop quality like Apple.
+Will never have single IoT protocol to rule them all.
+But may have three or four, with smart devices to tie them together.
+For example, token ring is gone, TCP/IP won, pervasive.
+Won't see something as fundamental as TCP/IP unity.
+Linus, what would you do in this IoT space?
+Love to make things, but I am not that hardware guy, soldering.
+If not doing kernel, would do something with Raspberry Pi, Beaglebone.
+I don't do code anymore, just manage pull requests.
+Linus, will you do a second career outside Linux?
+No, still like it, would be bored without a project like Linux or git.
+Daughter in college now, says people know her dad as the git guy.
+More well known for three month git project than 25 year Linux project.
+Loved doing user space programming, user space is so easy.
+Like a vacation, sitting on the beach.
+Fun, but you can't spend your life doing that.
+Prefer technology at the lowest level.
+Will there be another big project?
+Maybe, if something annoys me.
+Where will Linux be in X years?
+Don't know, just do the best thing you can each day.
+Linux happened naturally, without five year plans.
+Made Linux well-balanced, responsive.
+Have some future plans based on coming hardware.
+

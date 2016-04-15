@@ -1,0 +1,38 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Keynote
+
+Raj Talluri - Senior Vice President of Product Management at Qualcomm
+
+Embedded was here long before IoT.
+Wireless connectivity is at core of IoT.
+Redefined telephony in 2002.
+Redefined computing in 2010.
+Redefining everything today.
+Phone number is now a personal number, not a home or office number.
+Smartphone is first computer and Internet experience for many people.
+Now connect everything else around you.
+Radical change, 25B connected devices by 2020.
+I have about 43 IP addresses inside my house.
+Qualcomm ships 1B phones.
+Every device with software will be connected in some way.
+Three categories for devices: body, home, cities.
+If add display to device, user's expectations set by smartphone.
+Need same experience as smartphones, touch, frame rate.
+Computing at the edge.
+MP3 player, Spotify, never need to think about downloading music.
+I was in China the other day, with customer buying millions of devices.
+Most home appliances will include connectivity.
+Think beyond 'open door, turn on light'.
+Cities: security, metering, lots of gains to be had.
+Divergence presents challenges.
+IoT is leading the way to democratization of hardware.
+Make best hardware available to many, many people.
+By 2018, 50% of IoT solutions will be from startups less than 3 years old.
+Get ready for more content awareness.
+Perception, reasoning, action.
+Challenge for Linux community.
+Conscious camera for security.
+So much processing running at the edge.
+Classify security camera image as person, truck, dog, cat.
+

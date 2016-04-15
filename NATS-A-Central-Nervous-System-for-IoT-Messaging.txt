@@ -1,0 +1,60 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+NATS - A Central Nervous System for IoT Messaging
+
+Larry McQueary - NATS.io Product Manager
+
+NATS - cloud native messaging.
+IoT, mobile, big data, microservices have new requirements.
+Scale rapidly.
+Messaging renaissance.
+Cloud messaging is fastest growing segment of current messaging market.
+Open source first.
+NATS vision is from Derek Collison, Apcera CEO.
+Previously CTO and chief architect at VMware.
+SVP and chief architect at TIBCO.
+Architected Cloud Foundry.
+Technical director at Google.
+Could not get Redis to stay up at load.
+So Derek created NATS, focus on simplicity.
+Apcera product is trusted cloud platforms.
+NATS is control plane for Apcera platform.
+Started building expanded team around NATS in 2015.
+350K downloads of 7MB Docker image containing NATS.
+Other messaging systems try to do too much.
+They should have said no more often to new features.
+Carry too much baggage, have to install too much, RabbitMQ.
+Standards for their own sake.
+NATS DNA is performance, simplicity.
+Single binary, text-based protocol, no external dependencies.
+Available over anything.  Dialtone.
+Small footprint, and embeddable.
+Just what you need, and none of what you don't.  Golang principle.
+HTTP-like protocol, can use telnet to interact with NATS.
+If client misbehaves, server cuts off the client.
+Keeping the server up, NATS always on, has priority.
+Runs on Raspberry Pi and up to largest cloud servers.
+Footprint: RabbitMQ 183 MB, gnatsd 7 MB.
+10M+ concurrent connections, ~10M messages per second.
+NATS latency very predictable.
+RabbitMQ/etc. non-linear, unpredictable.
+NATS is faster than Redis.
+NATS roadmap:
+    Security: ACL based, external auth pluggable.
+    Auto discovery: intra-cluster, client cluster.
+    Enterprise messaging: hosted service, managed service.
+Use cases:
+    IoT telemetry data from sensors.
+    Microservices control plane.
+    Infrastructure monitoring.
+    Message bus.
+Deep strategic investment from Ericsson.
+Security is currently session based, TLS encryption.
+Future, ACL based access to messages.
+May add encryption based on identity.
+Each sensor different ID, or ID shared among multiple sensors?
+Working through that with partner Ericsson.
+NATS is unicast based, not multicast.
+Pub/sub assumes oblivious to topology.
+Use subject based addressing to target specific client.
+
