@@ -1,0 +1,47 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+IoT Programming Model: A Vision for Who and How to Develop in 2020
+
+Thiago Macieira - Software Architect at Intel
+
+IoT currently evolving as isolated islands of things.
+Severely limits IoT.
+Cloud knows I'm nearing home, turn on air conditioner.
+IoT will drive cloud business more than today.
+IoT needs to change from islands of things, to an intranet of things.
+Local orchestration, local devices control network.
+The smart thing needs to be at least as capable as the dumb things.
+Added value on top of what devices do by themselves.
+Local orchestration, with cloud for extra services.
+Wi-Fi costly in terms of power consumption.
+Challenges: easy to use, flexible, code reuse.
+Open source, yes, but need path to commercialization.
+Need to build in security from day one.
+If bolt on later, will have lots of holes.
+Operating system, drivers.
+Device management frameworks.
+Communication frameworks.
+Ease of development frameworks.
+Zephyr, small OS for MCU class devices, professionally developed.
+Soletta project, C code, a little higher level, OCF.
+MRAA, I/O library for Linux, sensors and actuators, C/C++, Python, JavaScript.
+Node.js, very easy to develop, enables creation.
+Incredible wealth of modules.
+Communications, services, data models from OCF.
+IoTivity bindings: C/C++, Java, JavaScript.
+Vision:
+Small devices running Zephyr and Soletta.
+Large devices running Linux, Soletta, or SOL (Service Orchestration Layer).
+Downloadable apps, management by the user, communicating via OCF protocol.
+Need same API, JavaScript, migrating up and down.
+IoT devices should have an API for extension beyond basic functions.
+Downloadable apps are needed for IoT, like iPhone.
+Moms download apps to smartphones, iPads.
+What about liability when something goes wrong?
+How to make apps well-behaved, avoid problems?
+Smartphones have sandboxes, boundaries.
+Give them high level environment so they don't write C code in drivers/kernel.
+IoT is happening, it cannot be stopped.
+Provide more option? Diversity? Or try to steer to a single winner, approved way?
+Need to converge to solution.
+
