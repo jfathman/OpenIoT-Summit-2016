@@ -1,0 +1,58 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Snappy Ubuntu Core on DragonBoard 410c
+
+Manik Taneja - Product Manager Ubuntu Snappy Core at Canonical
+
+Canonical, company behind Ubuntu.
+AWS, 70% of instances running Ubuntu.
+IoT 28% year over year growth.
+IoT revenue $7T by 2020.
+Never easier to create an embedded device.
+But need to manage life cycle for device.
+Manage device, upgrade device.
+Modern embedded uses general purpose Linux, normal toolchain.
+Constant updates, connected.
+Linux server ops:
+  Centralized, expensive, elastic, supported, cheap to service.
+Linux device ops:
+  Distributed, cheap, SPOF, field serviced, expensive to fix.
+Snappy, transactional updates, application confinement.
+Kernel and OS (RFS) have own writable area (app snap).
+Automatic updates, secure by design.
+Automatic backups, automatic rollback.
+RFS, 500 MB compressed to 70 MB, squashfs.
+Rollback any app snap or kernel snap.
+Future - live kernel updates?
+Might architect to live update running kernel, maybe 16.04 timeframe.
+Completely transactional.
+Traditional: compare package versions against repo.
+Snappy: bootloader dynamically chooses kernel and RFS.
+Two available at any time.
+Bootloader boots last known good kernel.
+If update fails, auto rollback to last known good so don't brick device.
+Each snap has its own writable space, so can roll back to uncorrupted data.
+App snaps define their own health checks.
+Can I ping google.com? etc. test cases.
+Define test cases, pass/fail, whether to stay in version or roll back.
+Based on same technologies as Docker, AppArmor, cgroups, namespaces.
+Each app has unique view of system.
+Designed for completely headless devices.
+Uses 'snappy', not 'apt-get'.
+Provides webdm, web device manager, to remotely manage.
+Use snappy store to extend devices lifecycle.
+Same hardware, different use, digital signage, home router.
+Repurpose same device.
+How to provision an empty device.
+Based on device unique identity.
+Snappy sandbox and interfaces, IPC, slots and plugs.
+Snappy is available for AWS, Azure, private cloud.
+Snapcraft, develop/package snaps.
+#snappy on irc.freenode.net.
+Demo: snappy example, based on Node.js.
+A snap is a single squashified file, like livecd.
+If there are 6 applications, there are only 6 files, read-only.
+Developers can still build their own kernels.
+Each snap has its own version of Node, Python, Ruby, etc.
+So can mix versions on same device, like Docker.
+
