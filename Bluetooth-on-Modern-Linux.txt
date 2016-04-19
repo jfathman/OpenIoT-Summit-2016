@@ -1,0 +1,87 @@
+OpenIoT & ELC 2016, San Diego, CA, Mon 4 Apr 2016
+
+Bluetooth on Modern Linux
+
+Szymon Janc - CODECOUP
+
+Cofounder at www.codecoup.pl.
+Focused on Bluetooth, NFC.
+Bluetooth:
+  10 - 100 meters.
+  2.4 GHz (ISM band).
+  Began in 1999, many problems, interop issues.
+  2010 LE, 2013 LE improvements, 2014 LE security improvements.
+Linux Bluetooth features:
+  Bluetooth 4.2
+  Audio media, A2DP (Advanced Audio Distribution Profile), AVRCP (Audio/Video Remote Control Profile).
+  Telephony.
+  Networking, PAN, 6LoWPAN.
+  Input device, HID (Human Interface Device Profile), HOGP (HID Over GATT Profile)
+  Split between kernel (low level protocols, security) and user space.
+  bluetoothd control daemon, D-Bus interfaces, IPC.
+  neard daemon for NFC.
+  obexd daemon for OBEX (Object Exchange) profiles.
+  Tools: bluetoothctl command line agent, btmon HCI (Host Controller Interface) tracer.
+BlueZ for Android, not to be used in Gnu/Linux.
+Bluetooth management interface.
+Required by BlueZ 5.
+Allows userspace to control kernel operations.
+Replaces raw HCI sockets.
+Available since Linux 3.4.
+btmgmt tool for command line.
+BlueZ D-Bus interface.
+Use this instead of hcitools.
+Use standard D-Bus ObjectManager and Properties interface.
+/org/bluez/hci0 adapters and remote devices as objects.
+Basic operations (GAP) (Generic Access Profile).
+Adapter settings, device discovery, connection management, pairing.
+org.bluez.Adapter1
+org.bluez.Device1
+org.bluez.Agent1
+D-Bus pass file descriptors among processes.
+Telephony, oFono is handling signaling (AT commands), PA is handling voice (SCO).
+Suitable for desktop voice (like Hangouts, Skype).
+Networking.
+org.bluez.NetworkService1 for tethering.
+org.bluez.Network1 returns network interface name (bnep0).
+Support for PAN (Personal Area Network) profile.
+Support in NetworkManager, ConnMan.
+obexd:
+  FTP file transfer profile.
+  OPP object push profile.
+  PBAP phone book access profile.
+  MAP message access profile.
+D-Bus session bus.
+D-Bus advertising, experimental but stable.
+Allows external apps to register advertising data.
+org.bluez.LEAdvertisingManager1 on /org/bluez/hciX
+Currently no support for scan responses.
+D-Bus GATT (Generic Attribute Profile) is experimental.
+LE connection oriented channels.
+sk = socket(PF_BLUETOOTH, type, BTPROTO_L2CAP)
+connect(sk, ...)
+6LoWPAN (IPv6 over Low power Wireless Personal Area Networks) over BLE.
+Simple to use.
+modprobe bluetooth_6lowpan
+ping6 -l bt0 xxxx:..:xxxx
+Custom solutions.
+Ideal for beacons or simple peripheral apps.
+User channel.
+Gives HCI exclusive access to user space application.
+http://git.kernel.org/cgit/bluetooth/bluez.git
+http://git.kernel.org/cgit/bluetooth/bluez.git/tree/src/shared
+http://git.kernel.org/cgit/bluetooth/bluez.git/tree/peripheral
+Tips:
+  Use D-Bus API.
+  Don't use hcitool.
+  Use bluetoothctl, btmgmt instead.
+  For HCI traces, use btmon instead of hcidump.
+  Old kernel?  Use Linux backports project.
+https://backports.wiki.kernel.org/index.php/Main_Page
+http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/
+https://bluez-android.github.io/
+Config: /sys/class/bluetooth, /sys/kernel.
+Debug: bluetoothd -n -d -E, or SIGUSR2.
+/etc/bluetooth/main.conf
+BLE mesh networking coming soon.
+
