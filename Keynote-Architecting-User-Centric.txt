@@ -1,0 +1,21 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Keynote
+
+Mine the IoT Skills Gap
+Architecting User-Centric Competitive Product Advantage
+
+Sarah Cooper, COO at M2Mi
+
+50% of US households have Wi-Fi.
+64% of adults have smartphones.
+Privacy - if you aren't paying for the service, your data is the product.
+60% like the wearable device, but only 20% like the associated app.
+Expectations for the app are very high.
+Device is single point of truth.
+Every device is part of a process.
+Synchronize a process without scripting the process.
+Users have context too - will device still be intuitive in 15 years?
+Ecosystems apply pressure on interoperability and shared control.
+Code for the future.
+

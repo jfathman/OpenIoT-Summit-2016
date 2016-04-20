@@ -1,0 +1,40 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Keynote
+
+Towards IoT Convergence
+
+Bryan Che - Senior Director Cloud Product Strategy at Red Hat
+
+Three trends shaping IoT.
+1. Consumerization of IT (Information Technology)
+2. Digitization of OT (Operational Technology)
+3. IoT convergence
+Consumerization of IT.
+Mobility tools.
+63% increased worker productivity.
+50% increased customer satisfaction.
+Delivery pipeline, monthly, not ~2 years.
+Red Hat Mobile Application "Platform".
+Digitizing healthcare, mobile assets.
+Huge transformation.
+Regulated industry, HIPAA.
+Digitization of OT.
+Railroad industry, 99.999% reliability SLA.
+Positive train control.
+Mandated by 2015, but will take until 2020.
+Must think about speed of deployment.
+Connectivity and management of solar in every house.
+Will compress lifecycles, years to weeks.
+Raspberry Pi is more powerful than cloud server of few years ago.
+This will accelerate.
+Architectures will converge: Data Center, Gateways, Devices.
+Linux containers provide consistent building blocks.
+Secure at the core.
+Isolation of hosts.
+Are sources trusted?
+What's inside containers?
+Trust is temporal.
+Need holistic view of convergence.
+Need orchestration tools.
+

@@ -1,0 +1,39 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Keynote
+
+The Evolution of Open Source to Propel the Growth of the Internet of Things
+
+Mark Skarpness - VP and General Manager of Embedded Systems at Intel
+
+IoTivity focus.
+Challenges of security, this is a barrier.
+People need to fundamentally believe it's secure.
+Need to be able to build devices without being security experts.
+Must be able to apply updates.
+Connectivity, low energy mesh networks.
+Communicate in interoperable standards fashion.
+Scalable, need different software stacks per size.
+Lifecycle: prototyping, product, sustaining.
+How to secure, update, support this device.
+We have great prototyping tools, but then fall off a cliff.
+So need tools that scale with lifecycle.
+IoT OS framework.
+Yocto supports or will support Soletta, Ostro, Zephyr.
+Zephyr OS runs on MCU too small for Linux.
+Real-time OS, open source, Apache 2 license.
+Edge devices, modular design.
+Zephyr community.
+Ostro is Linux targeted at IoT.
+Built using Yocto.
+Multiarchitecture, customizable.
+Sensible build system.
+Addresses continuum of lifecycle.
+Soletta: portable API, unified API.
+Native and JavaScript.
+Yocto toolset has five year history, leverage capability.
+Extensible SDK, simpler, more accessible than lower level Bitbake.
+Embedded development is predominantly done on Windows workstations.
+So run Yocto tools in Docker containers.
+Containers - clean, isolated build environments.
+
