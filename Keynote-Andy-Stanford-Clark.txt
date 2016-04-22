@@ -1,0 +1,32 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Keynote
+
+Andy Stanford-Clark
+
+Distinguished Engineer at IBM
+IBM Master Inventor
+Member IBM Academy of Technology
+Fellow British Computer Society
+
+Co-creator of MQTT messaging protocol.
+
+Standards are like toothbrushes.
+Everyone knows you need to use one, but nobody wants to use anyone else's.
+
+Use IoT to improve operations.
+Compare the one with the cluster.
+Engage with clients and markets in new ways.
+Kone added maintenance instrumentation to 2 million elevators and escalators.
+Whirlpool: 1 million connected devices in 2016, 175 million by 2025.
+Watson IoT platform.
+Connectivity is table stakes for IoT.
+Cognitive IoT, track and analyze maintenance records.
+Insight into what the numbers are telling you.
+Audio streams, listening to how the machine sounds.
+Machine learning, neural nets.
+Classify as usual or unusual signatures.
+Model normal behavior of elderly, alarm on missing or unusual activity.
+Machine learning, looking at data streams.
+IoT is not about sensors, it is about end-to-end.
+
