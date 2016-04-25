@@ -1,0 +1,41 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+V4L2 on Steroids: The Request API
+
+Laurent Pinchart, Owner at Ideas on Board
+
+Key concepts, userspace /dev/video*, format, crop, compose, scale.
+Set controls, 175 controls.
+Allocate DMA buffer, queue of buffers.
+Start video stream.
+Queue/dequeue event notifications.
+Stop video stream.
+Device modes, YUV, MPEG.
+Bridge driver, /dev/video*.
+Decoder driver, /dev/v4l-subdev*.
+Media controller, separate API.
+Model the video device.
+Pipeline, any output connects to any input.
+Problems:
+How to synchronize controls to buffers.
+Want userspace to apply many parameters to single frame.
+Start/stop video stream to change parameters.
+Leads to start/stop for every frame.
+The Request API:
+Group all parameters into a 'Request'.
+QBUF, CMD_REQ(QUEUE)
+CMD_REQ(BEGIN), CMD_REQ(ALLOC)
+Implementation:
+ALLOC REQ
+QUEUE REQ
+DELETE REQ
+Control framework.
+Next:
+Pass metadata from device for every frame captured.
+Kernel pass to user space.
+https://lwn.net/Articles/668726/
+https://git.linuxtv.org/
+Don't want two implementations in kernel.
+So transition to new implementation.
+Multiple rounds of patches.
+
