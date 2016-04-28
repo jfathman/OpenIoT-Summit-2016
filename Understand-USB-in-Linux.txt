@@ -1,0 +1,91 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Understand USB in Linux
+
+Krzysztof Opasiak, Samsung R&D Institute, Poland
+
+Good speaker.
+Heavily attended session.
+
+USB is about providing services.
+Both host and device side.
+USB Vcc, Gnd, Data+, Data-.
+Differential signal.
+USB hub.
+Physical versus logical topology.
+Logical - does not see hub.
+No way to communicate directly between two USB devices.
+Always need a USB host.
+USB protocol.
+Up to 31 endpoints (including ep0).
+endpoint0 may transfer data in both directions.
+All others are unidirectional.
+IN - device to host, from host perspective.
+OUT - host to device.
+Control: enumeration / discovery / application.
+Interrupt: small amount of low latency data (keystroke).
+Bulk: large data transfer.
+Isochronous: time sensitive, audio / video.
+Endpoints grouped into interface.
+Configuration is group of interfaces.
+USB is a host controlled bus.
+Host initates, polled bus.
+Host polls each device.
+Plug and play.
+Plug in device, detect connection, set address.
+Get device info, choose configuration, choose drivers for interfaces.
+Linux driver makes device accessible from user space.
+Different driver for each device type.
+USB entity has descriptor for identification, idVendor, idProduct.
+idVendor assigned by USB organization.
+USB classes, HID, audio, etc.
+Use generic driver, not vendor specific.
+iSerial should be unique, often not, especially for devices from China.
+bMaxPower
+Choose one of available configurations.
+USB driver is piece of kernel code.
+Provides something to user space.
+Implements some communication protocol.
+struct usb_driver
+Use idVendor, idProduct.
+Mouse/keyboard, X11 will listen for input events.
+Network devices, network manager should auto configure.
+
+USB security
+Drivers probed automatically.
+Userspace starts using device automatically.
+BadUSB attack scenario.
+Kernel creates new input source.
+X11 just starts using it.
+Any command can be executed which does not require sudo.
+So try to use device interface authorization.
+USB guard, gnome solution.
+Each USB device has authorized attribute in sysfs.
+Drivers not allowed to auto bind to newly inserted device.
+Allows time for user with lsusb to check new device.
+lsusb -t
+echo 0 > authorized_default
+lsusb -v -d
+echo 1 > authorized_default
+
+May I have my own USB device?  Yes.
+BeagleBone, Odroid, etc. with UDC controller.
+USB device = USB gadget (software) + UDC.
+USB gadget handles enumeration, responds to most general requests.
+Kernel menuconfig, USB Gadget Drivers.
+Ethernet, serial, printer, audio, video, many more.
+Base composition, VID, PID, class, etc.
+Use gt to load gadget scheme.
+https://github.com/kopasiak/gt
+libusbgx
+https://github.com/libusbgx/libusbgx
+Declarative gadget description, gadget schemes.
+libconfig syntax.
+
+Live demo, odroid, Tizen.
+gt load g1
+ifconfig -a, usb0
+usbguard, front end for authorize.
+Also something rule based, which device(s) should be authorized.
+At boot, kernel command line args.
+
