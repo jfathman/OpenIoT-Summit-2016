@@ -1,0 +1,30 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Unchain Your Toolchains with CROPS
+
+Todor Minchev, Senior Software Engineer at Intel
+
+CROPS
+Open source, cross-platform, build binaries for Linux, Windows, OS X.
+Any binaries.
+Easy toolchain distribution and updates.
+Clean, reproducible state for development and test.
+Bundling in VMs is too heavy.
+VM has performance and interface issues.
+Put toolchains in Docker containers.
+Easy toolchain distribution, updates, roll-backs.
+Supports remote builds.
+Active community support.
+But containers add level of complexity.
+And are based on forward looking technologies.
+https://git.yoctoproject.org/cgit/cgit.cgi/crops/tree/README.md
+https://github.com/crops/crops
+dockerhub crops
+Zephyr Arduino
+Eclipse supports Zephyr.
+Eclipse discover capabilities of toolchain container using embedded JSON.
+Challenges:
+File synchronization.
+Depends on Internet connectivity.
+Binary file diffs.
+Pseudo terminals on Windows.

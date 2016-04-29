@@ -1,0 +1,60 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+MQTT - IoT Messaging Protocol
+
+Francisco Quintero, Lead Software/Embedded Firmware Engineer at Verizon Telematics
+
+99% of devices are still unconnected.
+Distributed network.
+Run on batteries or limited power.
+Unreliable networks.
+No need to write app messaging protocol from scratch on top of TCP/IP.
+MQTT handles roaming in/out of coverage.
+MQTT broker mosquitto is well supported.
+MQTT is lightweight pub/sub.
+Invented in 1999 by Andy Stanford-Clark (IBM) to send sensor data
+from oil pipelines through satellite link.
+Reliable bi-directional messaging.
+High volume data, low bandwidth networks.
+Small code footprint.
+Runs on top of TCP/IP.
+Client and broker need TCP/IP stack.
+Event oriented, push, avoids polling.
+Recovery, store and forward, pub-sub.
+Runs on STM32F4 MCU, very small.
+Broker decides which subscribers to notify.
+'topic' string is like a Redis channel.
+Topic is a hierarchical structured string.
+MQTT in C = 30KB, Java = 100KB.
+Client libs C/C++, Go, Java, JavaScript, etc.
+Broker is a receiver for messages.
+Handles authentication, authorization.
+Scalable, easy to integrate in backend systems.
+Connection initiated by client.
+ClientID unique ID per broker.
+Username/password in plain text, user must encrypt.
+CleanSession = false flag, persistence / storage.
+Publish, subscribe, and unsubscribe.
+Payload, binary form, up to 260 MB.
+KeepAlive.
+Notify other clients if client disconnects ungracefully.
+Wireless reality, get ungraceful disconnects 80% of the time.
+Topics case sensitive, UTF-8, supports wildcards + and #.
+QoS levels:
+ 0 - at most once, no acks, not stored
+ 1 - at least once, could be more than once
+ 2 - exactly once, highest QoS, but slowest
+QoS is set by client.
+May be downgraded by broker.
+Session identified by ClientID.
+Message order is preserved, queued.
+Retained messages.
+Client takeover, client reconnects based on same ClientID,
+will close prior connection.
+MQTT requires 5 times less bytes than HTTP.
+Reliable delivery.
+MQTT used in POS, telematics, many more.
+Facebook uses MQTT for Messenger protocol.
+Amazon uses MQTT for AWS IoT.
+Amazon AWS IoT: HTTP, MQTT, WebSockets.
+Eclipse Paho project, C/C++ MQTT libs.
