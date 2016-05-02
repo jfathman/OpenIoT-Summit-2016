@@ -1,0 +1,54 @@
+OpenIoT & ELC 2016, San Diego, CA, Tue 5 Apr 2016
+
+Mist Computing - Going Beyond the Fog
+
+Jurgo Preden PhD., CEO at Thinnect, Estonia
+
+Why mist computing?
+How can we scale IoT to 75B devices?
+Utilize compute power at edge of network.
+Create self-configuring and self-managing solutions.
+Mist computing offers these features.
+Edge of network, limited power, bandwidth, memory.
+Connectivity, 6LoWPAN IP (IPv6 over radio).
+Now have 32-bit ARM cores running at 30+ MHz.
+Communication is much more expensive than compute.
+Edge IoT, 256 KB memory, 250 KB/sec bandwidth.
+The IoT edge is not a scaled down Internet.
+Do we have the right design? (Bill Buxton)
+Never time to get design right, but have years to fix it.
+Age of IoT.
+Dumb nodes send repetitive raw data to cloud intelligence.
+Mist sends actionable intelligent information to fog / cloud intelligence.
+Cisco fog computing is gateway centric (but Cisco sells gateways).
+We need nformation, not data, from the network.
+Network should deliver only the information that has been requested, when it has been requested.
+Subscriber-provider model.
+Devices must be situation aware and adapt to information needs and changing network configuration.
+Cloud and fog have awareness of user needs, and global situation.
+Mist has an awareness of physical environment and local situation.
+Edge versus Mist.
+Edge: fixed function, fixed config, data processing.
+Mist: high level rules, dynamic function, new app assembled at runtime from existing devices.
+Device level rules, binary RDF.
+Rules, data relations.
+Mist in action.
+Information fusion.
+802.15.4 radio for low-rate wireless personal area networks.
+Have deployed working systems.
+Acoustic arrays to detect military border crossings.
+Smart streetlight control with 600 nodes.
+With energy savings, ROI in 2 years instead of 7 years.
+No network to install or configure.
+Value proposition is to dim the lights when no traffic.
+Detect human movement, traffic sensor.
+Share sensor network with air quality sensors.
+Self-configuring.
+Building blocks.
+Mist computing.
+Self-diagnostics of networks.
+RF is very unpredictable.
+Using mesh networking.
+Fog computing has scalability problems.
+How can owner of sensor control access to data?
+
