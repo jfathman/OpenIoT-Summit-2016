@@ -1,0 +1,78 @@
+OpenIoT & ELC 2016, San Diego, CA, Wed 6 Apr 2016
+
+Introduction to IoT.js
+
+Tillman Scheller, Principal Compiler Engineer at Samsung Research UK
+
+IoT.js
+Lightweight version of Node.js for MCU.
+Runs on JerryScript.
+Backward compatible with Node as much as possible.
+32KB - 256KB target.
+JerryScript, 10KB RAM.
+Optimized for MCU.
+Developed from scratch by Samsung.
+Why JavaScript for MCU?
+Huge pool of JavaScript developers.
+Opens opportunity for web dev to write for embedded.
+Performance overhead of JavaScript not an issue for control.
+Increased productivity, shorter time to market.
+Ability to load code over the network.
+Can be done safely.
+Security, executing JavaScript code safer than native code.
+Actively developed on github.
+Apache 2.0 license.
+Building a community around IoT.js / JerryScript.
+JerryScript Jun 2014.
+100% pass ECMA TC39 Test262 ECMAScript conformance suite.
+Rewritten compact byte code landed Jan 2016.
+Current focus on performance optimization.
+Great improvement in memory consumption, performance.
+Primary goal is low memory footprint.
+Interpreter only, no JIT compiler.
+Compressed pointers.
+No AST, directly creating byte code.
+Heavily optimized for low memory consumption.
+Extremely portable.
+Self-contained.
+Small C library.
+Can run on bare metal.
+Main support is for STM32F4, ESP8266.
+Runs on Linux as well.
+Written in C99.
+74K LOC.
+190KB gcc lib for ARM Thumb 2.
+Full ECMAScript 5.1, 100% Test262.
+C API for embedding JerryScript.
+Byte code snapshot feature.
+Store precompiled in flash storage.
+IoT.js
+Mostly written in JavaScript.
+Can't guarantee all npm modules run.
+Depends on size (memory), native.
+libtuv adapted from libuv, smaller footprint.
+Modules: Assert, Buffer, DNS, Events, Filesystem, HTTP, ...
+STM32F4 $20.
+Cortex M4F 168 MHz.
+192KB RAM, 1MB flash.
+Realtime OS, NuttX, BSD license.
+Memory consumption on RPi 2: IoT.js 40 - 80KB, Node.js 6.7 - 8.63MB.
+Duktape 1.4 versus JerryScript.
+Another open source JavaScript engine, fairly compact.
+SunSpider 1.0.2 for performance.
+Tetris demo, STM and RPi2 running same code.
+IoT.js / JerryScript / Nuttx / STM32F4.
+Pong demo, implemented as a Node.js module.
+Future work.
+Further performance improvements.
+Enhance JerryScript C API.
+Add more IoT.js modules.
+Package manager for IoT.js.
+Support more devices.
+Lowers barrier to entry for embedded JavaScript.
+Speeds up development.
+Active community.
+Strategic interest by Samsung.
+Attract JavaScript developers to IoT.
+Samsung interested in IoT.
+Run MQTT on it?  Yes.

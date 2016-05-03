@@ -21,7 +21,7 @@ Age of IoT.
 Dumb nodes send repetitive raw data to cloud intelligence.
 Mist sends actionable intelligent information to fog / cloud intelligence.
 Cisco fog computing is gateway centric (but Cisco sells gateways).
-We need nformation, not data, from the network.
+We need information, not data, from the network.
 Network should deliver only the information that has been requested, when it has been requested.
 Subscriber-provider model.
 Devices must be situation aware and adapt to information needs and changing network configuration.
