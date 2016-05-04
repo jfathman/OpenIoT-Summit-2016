@@ -1,0 +1,94 @@
+OpenIoT & ELC 2016, San Diego, CA, Wed 6 Apr 2016
+
+6LoWPAN - An Open IoT Networking Protocol
+
+Stefan Schmidt, Senior Software Engineer at Samsung
+
+6LoWPAN, IPv6 over Low power WPAN (wireless personal area network).
+Open, specified by IETF.
+Designed and developed in public.
+IPv6 often used with CoAP, MQTT, etc.
+Motivation, battery powered sensors.
+WiFi access points, gateways.
+Home use, industrial use, IEEE 802.15.4.
+Motivation, 6LoWPAN.
+IPv6, less than full TCP/IP stack.
+Sensors only transfer a little data.
+Motivation, Linux-wpan.
+802.15.4 subsystem in Linux kernel.
+Integrate 802.15.4 chips in Linux devices.
+Movement towards IP.
+IoT modeled on success of the Internet.
+But TCP/IP is not one size fits all.
+Dev boards: Ci40, Artik 5/10, RPi with openlabs shield.
+Products using 802.15.4: Google Nest thermostat, Google OnHub router.
+802.15.4 often mixed up with ZigBee, which above L2 is proprietary.
+No ZigBee support for Linux kernel, non-GPL.
+IEEE 802.15.4 / LoWPAN.
+Specifies physical / MAC layer.
+Simple addressing, no routing.
+Star and peer-to-peer topologies.
+Good for battery powered devices.
+Mesh needs extra layers.
+6LoWPAN.
+Auto-configuration, neighbor discovery.
+Header and payload compression.
+Becomes part of network layer (IP layers).
+IPv6 max packet size 1280 bytes, but 802.15.4 has 127 byte MTU.
+Need fragmentation scheme.
+Avoid large packet sizes.
+Header size problem.
+33 bytes payload out of 127 byte MTU, bad ratio.
+People not happy with IPv6 over LoWPAN.
+So header compression.
+Headers: 6LoWPAN 9 bytes, IPv6 40 bytes.
+6LoWPAN compression.
+IPHC, EAP, NHC (not HC1, HC2, deprecated).
+NHC, RFC 6282, global, multicast.
+Draft specs to compress TCP/IP.
+Use with UDP is best.
+Reduce 48 byte IPv6 + UDP headers to 6 bytes out of 127 byte frame (MTU).
+Generic header compression, RFC 7400.
+Dictionary static on every node.
+Stateless address autoconfiguration.
+FE80::/64 prefix.
+RFC 6775 neighbor discovery for 6LoWPAN.
+Bluetooth LE relationship.
+IETF spec IPv6 over BTLE, RFC 7668.
+Compression.
+Linux kernel shares wpan and Bluetooth subsystems.
+NFC, DECT, PLC (powerline), 6loBAC, RS-485.
+Linux-wpan status report.
+802.15.4 and 6LoWPAN in Linux kernel.
+Relases and documentation: http://wpan.cakelab.org
+Architecture:
+       http ssh
+       udp  tcp
+         IPv6
+  lowpan0 | lowpan1
+       6LoWPAN         <-- handles fragmentation reassembly
+    wpan0 | wpan1
+Hardware: qi-hardware.com, openlabs.ca.
+Chips: at86rf2xx, mrf24j40, cc2520, atusb, adf7242.
+Connection --
+Linux to Linux devices.
+Linux to Contiki devices.
+Linux to RIOT devices.
+Future work.
+Beacon and MAC command frame support.
+Scan for available PANs.
+Short address handling.
+Improve existing drivers.
+Support new hardware.
+Neighbor discovery optimization, RFC 6775 6LoWPAN.
+Interoperability.
+Linux-wpan.
+Basic tests with Contiki.
+RIOT OS developers test against Linux-wpan.
+Formal plugtest.
+Misc.
+RFC 6550 routing protocol for low power and lossy network.
+Google Thread network protocol uses many parts of 6LoWPAN.
+Potential for cooperation.
+Thread spec might be available to public later.
+
