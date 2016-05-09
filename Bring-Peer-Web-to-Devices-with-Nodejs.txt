@@ -1,0 +1,102 @@
+OpenIoT & ELC 2016, San Diego, CA, Wed 6 Apr 2016
+
+Bringing the Peer Web to All Your Devices with Node.js
+
+Matthew Podwysocki, Principal Software Engineer at Microsoft
+Experience with Unix, Solaris, Linux.
+Works on React Native, libuv.
+
+Change the world with IoT and the peer web.
+Share nodes with colleagues without Internet connections.
+Put ownership of data back in your hands.
+At home we have perfect connectivity, but what about security, privacy?
+Big challenges where traditionally no connectivity.
+Re-invent manufacturing, operate on low margins.
+Not a good environment for Wi-Fi, expensive.
+Invest in smaller form factors.
+Change the face of farming, without Wi-Fi, cellular access.
+Help in times of crisis, earthquake, cellular fails.
+Satellite phones expensive, limited battery life.
+thaliproject.org
+Most people just talk to the cloud.
+thali remains functional when the cloud is unavailable.
+Store and forward mechanism.
+Enable local discovery.
+Bluetooth, BTLE, AllJoyn, etc. protocols.
+Secure synchronization, inconvenience.
+Eventual consistency, tradeoffs.
+Need strong identities, device, app.
+Strong identity, public key, X.509 certificates, TLS.
+Phone now as powerful as server five years ago.
+Phone becomes most important thing in your life.
+Consensus algorithms, security, quota management.
+Always bet on JavaScript.
+Something that runs everywhere, C or JavaScript.
+Node.js, your device as a server.
+Works on any platform.
+Phones have restrictions about what can run.
+V8 not allowed on iOS, but works with SpiderMonkey.
+JXcore, dead-end, too much work, company out of business.
+Devs still working on it, but can't expect parity in future.
+Stuck on Node.js 0.10.
+Solution: forked Node.js, added support for SpiderMonkey.
+Deploy to iOS, Android, without problem.
+Node.js on ChakraCore.
+Pull request for Node.js to swap out runtime.
+Perhaps open door to JXcore-like solution.
+PR not accepted yet, so put under Node-ChakraCore.
+Run on Edison, Windows IoT devices.
+But we need pluggable backends.
+Catalyst.
+Microsoft working on ChakraCore for Linux.
+https://github.com/nodejs/node-chakracore
+So potential to run this on smartphones.
+Apache Cordova.
+Common thing in HTML5 (not Android Java).
+Access to cameras, etc. on phone.
+Could use React Native.
+PouchDB, data synchronization between devices.
+CouchDB, good way to keep in sync, HTTP.
+Rehydrate on the other side.
+Replication out of the box.
+Wi-Fi/Bluetooth to keep apps/devices in sync.
+Use Bluetooth to announce able to synchronize with you.
+Then use Wi-Fi for actual data transfer.
+Wi-Fi discovery is a piece of junk.
+BLE discovery is much better.
+Use Bluetooth to send data back and forth, fairly fast.
+Security, TLS + public keys.
+How do we exchange identifiers without making users hate us?
+PIN
+Some chance for man in the middle, small chance.
+Prompt user: Pairing code 069336 Yes or No.
+Live or die by CI.
+Each phone is slightly different.
+Different radios, different stacks.
+Each pull request runs through 20 Android, 20 iOS devices.
+When building peer web, need CI testing of many devices.
+Where is peer web actually used?
+Project Stanton, at Rockwell Automation, @project_stanton.
+Future of Rockwell Automation factory floor.
+Power of peer web.
+What can I build?
+Social networks.
+Industrial IoT.
+Dream big.
+Online/offline scenario.
+Share data, share pictures.
+Privacy is not a crime.
+Users have rights, we should not violate.
+Engineers have duty.
+Only identify a user with their consent.
+Kim Cameron's laws.
+Explose least amount of ID information.
+As of Android Marshmallow, app can't see Wi-Fi or Bluetooth MAC addresses.
+But need that to advertise to the world.
+Unless user gives consent to do so.
+Click button every time, unfortunate.
+Help save peer-to-peer on Android.
+Took away a major capability.
+Ways around that.
+Do mesh networking.
+Microsoft interest in this is connected factories.
