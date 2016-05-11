@@ -1,0 +1,77 @@
+OpenIoT & ELC 2016, San Diego, CA, Wed 6 Apr 2016
+
+Bringing DevOps to Devices
+Modern Update Approaches for Embedded Linux
+Yocto, Linux Containers and More
+
+Petros Angelatos, Founder / CTO at Resin.io
+
+Software updates for devices.
+Using Docker and Yocto.
+Embedded devices need full lifecycle support.
+We know importance of updates from web, cloud, mobile.
+Recalling products costs money.
+Higher exposure to security exploits.
+Longer release cycles.
+Toyota recalled 1.9 million vehicles for software update.
+VW recalled 2.46 million cars.
+Heartbleed security bug, this will happen again.
+Updates are difficult.
+Poor connectivity.
+Intermittent power.
+Devices can be anywhere.
+Devices could be in middle of critical operation.
+Failed update may be bricked device.
+Host (not embedded) update behind load balancer, switch VMs.
+Replace USB stick based updates, requires truck roll.
+Update technologies:
+  Image based
+  Package based, does not scale well, not used much in embedded space
+  Containers, deploy without touching rest of system
+Can easily run containers on devices.
+Resin.io architecture diagram.
+Userspace based on Yocto.
+Resin agent manages upgrades.
+Different approaches for updating each layer.
+Yocto layer architecture.
+meta-resin is Yocto layer to build resin.io OS images.
+Host OS updates, A/B method:
+  CoreOS
+  ChromiumOS
+  Ubuntu Snappy
+  Brillo
+  others
+Partition layout: Linux & Bootloader | Root | Inactive | Data.
+Inactive is an identically sized partition.
+Atomic updates.
+Immutable filesystem images.
+Image as unit of deployment.
+Bootloader points to first root partition.
+Initial device state.
+Load version 2 to inactive partition.
+Can interrupt this without issues.
+At end, verify integrity and sync to disk.
+Copy bootfile from OS image to boot partition, kernel, DTBs, initrd, etc.
+Do it in atomic fashion.
+Sync to disk.
+Rename to destination.
+Flip flag in bootloader to point to version 2.
+Reboot device.
+Go back and forth between active/inactive.
+Need hardware watchdog to detect failed update.
+Set to ~5 minutes.
+Boot, self-test.
+New version marks self as stable after running self-test.
+Make decision to roll back to version 1.
+Failsafe updates.
+Containers, Docker.
+Bandwidth efficient through layer sharing.
+Don't need reboot if update application.
+Do better with binary diffs.
+Container updates.
+Build update strategies depending on requirements.
+Update strategies: (1) download then kill; (2) hand over.  
+App specific method to coordinate switchover.
+Open source, Apache 2 license, resin-os, resin-supervisor.
+Food for thought, same tools for OS update, host OS updates in containers.
+Live demo: update drone flight control software in-flight, 50 mSec cutover.
