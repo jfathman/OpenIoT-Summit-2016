@@ -1,0 +1,82 @@
+OpenIoT & ELC 2016, San Diego, CA, Wed 6 Apr 2016
+
+Hardware Design for Linux Engineers
+
+Grant Likely, Linux Kernel Engineer at Linaro, Aberdeen, Scotland
+
+People who are really serious about software should make their own hardware. Alan Kay.
+Solve software problems with hardware, test jigs, real world interfaces.
+Hardware design has never been easier.
+Free software tools, prototype services, manufacturing, sales.
+Start with basics, Grove starter kit, premade modules, enough to get started.
+Arduino, simple analog circuits.
+Sparkfun, Adafruit, Seeed Studio.
+Adafruit wiki.
+Hackaday, cool hardware projects.
+Need soldering iron, multi-meter, helping hands, o-scope.
+Lead-free solder really hard to work with, leaded solder much easier.
+Support - fab labs, local hacker spaces with laser cutter, 3D printer.
+Design tools, open source, multi-layer, stable, high end features.
+KiCad, CERN put money into it.  http://kicad-pcb.org/
+Fritzing, very accessible.  http://fritzing.org/home/
+Eagle. http://www.cadsoftusa.com/eagle-pcb-design-software/
+Convert schematic to layout for build.
+Large portion of hardware community uses Eagle.
+Free to use for two layer board.
+Inkscape for laser cutter. https://inkscape.org/en/
+OpenSCAD - modeling 3D printer. http://www.openscad.org/
+git
+Hardware design tools picking up software tools, revision control.
+Prototyping.
+PCB printing.
+Dirty PCBs. http://dirtypcbs.com/
+OSHPark, $10 for three boards size of business card. https://oshpark.com/
+Seeed Fusion PCB. http://www.seeedstudio.com/service/index.php?r=pcb
+Build PCBs at home using lasers, 3D printers.
+Assembly, do it yourself, learn to solder.
+Houses assemble, source the parts.
+Submit entire order online, Gerber files, BOM.
+Find a manufacturing partner (recommend Seeed Studio).
+Should provide design for manufacturing review.
+That is your peer review.
+Seeed produces a test kit.
+Sales and marketing, Seeed, Adafruit, Sparkfun, hobbyist market.
+Example, design for 96Boards. http://www.96boards.org/
+Start with KiCad template or fork an existing design.
+96Boards UART, sensors mezzanine, robomezzi motor controller robotics.
+Mechanical mounting consideration.
+Surface mount (isn't that bad) or through-hole (hobbyist preferred)?
+Manufacturers prefer surface mount, fewer steps in manufacturing process.
+Choosing components.
+What footprints?
+Use datasheets, circuit examples.
+Look at open hardware designs.
+Remember the passives, decoupling capacitors.
+Prototype on breadboard, reveals issues, capacitance, cables.
+Power, regulated 5V/1A, 1.8V/0.1A, 3.3V regulated down from 5V rail.
+I/O voltage level.
+Did not appreciate how difficult this is when started.
+Transparent level shifting is tricky.
+Use PCA9306 dual channel bidirectional made for I2C, or BSS138?
+Good for short traces, poor for off-board.
+Oscillators difficult to debug until o-scope.
+I2C.
+Choosing how strong the signals are pulled up.
+Manufacturing - as much work as design of board.
+Automate design package to avoid getting out of sync:
+  Gerber files
+  BOM
+  Position file
+  Schematic
+  Factory test plan
+  Documentation
+Prototyping versus production.
+Waiting for hardware spin.
+Design for your own form factor.
+Spice, analog simulators.
+Had problems with traces too long.
+Long lines, too much capacitance.
+Two lines parallel, issues.
+Shortened traces.
+Ground traces for isolation helps.
+
